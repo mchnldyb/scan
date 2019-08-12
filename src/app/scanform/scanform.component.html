@@ -1,0 +1,66 @@
+<div class="container-fluid">
+
+    <!--  Toast   -->
+    <!-- <div aria-live="polite" aria-atomic="true" style="position: relative;">
+       
+        <div style="position: absolute; top: 15px;/* bottom: -100%; */right: 0; width: 24%;">
+
+            
+            <div class="toast shadow-lg p-3 mb-5 bg-white rounded" id="myToast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true">
+                <div class="toast-header">
+                   
+                    <svg class="bd-placeholder-img rounded mr-1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#009900"></rect></svg>
+                    <strong class="mr-auto">Anatomy Models Count</strong>
+                    <small class="text-muted">just now</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="toast-body">
+                    Item counted. Thanks
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="row">
+        <div class="col-md-12" id="form_section">
+            <div class="text-center mb-3" id="">
+                <img src="https://imgplaceholder.com/302x86" alt=" Logo" class="" />
+            </div>
+
+            <div class=" jumbotron jumbotron-fluid" style="margin: 0 35px 0 0px;">
+                <div class="lead">
+                    <div class="form-group">
+                        <label for="barcode_id"></label>
+
+                        <div class="col-md-8 offset-md-2">
+                            <input #barcode (keyup.enter)="onSubmit(barcode.value,barcode)" autocomplete="off" name="barcode" type="text" class="form-control form-control-lg" id="barcode_id" placeholder="Item barcode goes here" autofocus>
+                        </div>
+
+                    </div>
+                    <!-- <form id="frm-anatomy" class="">
+                        <div class="form-group">
+                            <label for="barcode_id"></label>
+
+                            <div class="col-md-8 offset-md-2">
+                                <input #barcode (keyup.enter)="onSubmit()" autocomplete="off" name="barcode" type="text" class="form-control form-control-lg" id="barcode_id" placeholder="Item barcode goes here" autofocus>
+                            </div>
+
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: -100px;" *ngIf="codes.length > 0">
+        <h5 class="mb-1">Scan Queue</h5>
+        <ul class="list-group list-group-flush" id="barcode_list">
+            <li class="list-group-item" *ngFor="let code of codes">{{ code }}</li>
+        </ul>
+    </div>
+
+
+</div>

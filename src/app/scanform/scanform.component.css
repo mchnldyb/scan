@@ -1,0 +1,32 @@
+ul#barcode_list li:first-child {
+    background-color: red;
+}
+
+ul#barcode_list li:last-child {
+    background-color: green;
+}
+
+ul#barcode_list:empty {
+    opacity: 0;
+}
+
+ul#barcode_list {
+    width: 100%;
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+    overflow-y: scroll;
+    border: 2px solid #ccc;
+    max-height: 500px;
+    height: 475px;
+}
+
+h5 {
+    margin: 0 45% 0 46%;
+}
+
+.hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
