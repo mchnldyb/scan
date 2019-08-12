@@ -16,9 +16,10 @@ export class ScanformComponent implements OnInit {
   }
 
   onSubmit(barcode: string, field: HTMLInputElement){
-    console.log(barcode);
-    if(barcode){
+    //console.log(barcode.length);
+    if(barcode.length === 14){
       this.codes.push(barcode);
+      console.log(barcode);
       field.value = '';
     }
     //this.codes.push()
